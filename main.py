@@ -1,10 +1,7 @@
 import personagens 
 from personagens import * 
-import os 
 from os import * 
-import time
 from time import sleep
-import configuracoes_de_estetica 
 from configuracoes_de_estetica import limpar_tela
 from configuracoes_de_estetica import linhas
 
