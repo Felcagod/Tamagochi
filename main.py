@@ -18,7 +18,8 @@ class Tamagochi():
         self.idade = 0
         self.necessidade_banheiro = 0
         self.energia = 10
-    
+        self.sujeira = 0 
+
     #funcao para mudar de nome;
     def MudarNome(self, nome):
         self.nome = nome 
@@ -59,6 +60,11 @@ class Tamagochi():
     #Personagem vai ao banheiro;
     def banheiro(self):
         self.necessidade_banheiro = 0 
+        self.sujeira += 1
+    
+    #Limpando a sujeira
+    def LimparSujeira(self):
+        self.sujeira-=1
 
     #Deixando o persoangem mai velho
     #mude o numero daa variavel "self.idade += 0.5" para o tempo passar mais rapido
@@ -139,6 +145,7 @@ while True:
         print(f"Idade: {tamagochi.idade} anos")
         print(f"Necessidade de ir ao banheiro: {tamagochi.necessidade_banheiro}")
         print(f"Energia: {tamagochi.energia}")
+        print(f"Sujeira: {tamagochi.sujeira}")
         linhas()
         print("O que você quer fazer?")
         print("1. Alimentar")
@@ -146,7 +153,8 @@ while True:
         print("3. Cuidar")
         print("4. Dormir")
         print("5. Banheiro")
-        print("6. Sair")
+        print("6. Limpar Sujeira")
+        print("7. Sair")
         opcao = input("Opcao escolhida: ")
         limpar_tela()
 
@@ -166,7 +174,11 @@ while True:
         elif opcao == "5":#Personagem vai ao banheiro
             tamagochi.banheiro() 
 
-        elif opcao == "6":#Saindo Do Jogo
+        elif opcao == "6":#Limpando a sujeira 
+            tamagochi.LimparSujeira()
+            
+
+        elif opcao == "7":#Saindo do Jogo
             limpar_tela()
             print("----OBRIGADO POR JOGAR!----")
             sleep(2)

@@ -1,6 +1,4 @@
-import time 
 from time import sleep 
-import configuracoes_de_estetica
 from configuracoes_de_estetica import * 
 
 def pikachu():
