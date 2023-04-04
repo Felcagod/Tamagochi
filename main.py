@@ -95,7 +95,9 @@ def escolha():
             
         elif character_option == 4:
             cont+=4
-            
+        else:
+            print("Opcao invalida. Tente novamente")
+            linhas()
 
     except:
         limpar_tela()
